@@ -10,10 +10,38 @@
 		C4A1279024DD1E5300320A06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A1278F24DD1E5300320A06 /* AppDelegate.swift */; };
 		C4A1279224DD1E5300320A06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A1279124DD1E5300320A06 /* SceneDelegate.swift */; };
 		C4A1279424DD1E5300320A06 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A1279324DD1E5300320A06 /* ContentView.swift */; };
-		C4A1279624DD1E5400320A06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A1279524DD1E5400320A06 /* Assets.xcassets */; };
 		C4A1279924DD1E5400320A06 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A1279824DD1E5400320A06 /* Preview Assets.xcassets */; };
 		C4A1279C24DD1E5400320A06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A1279A24DD1E5400320A06 /* LaunchScreen.storyboard */; };
 		C4A127A724DD1E5400320A06 /* viper_swift_ui_portfolioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A127A624DD1E5400320A06 /* viper_swift_ui_portfolioTests.swift */; };
+		C4A127DA24DD1E8500320A06 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A127B224DD1E8500320A06 /* LoginView.swift */; };
+		C4A127DB24DD1E8500320A06 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A127B324DD1E8500320A06 /* LoginInteractor.swift */; };
+		C4A127DC24DD1E8500320A06 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A127B424DD1E8500320A06 /* LoginPresenter.swift */; };
+		C4A127DD24DD1E8500320A06 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A127B724DD1E8500320A06 /* Assets.swift */; };
+		C4A127DE24DD1E8500320A06 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A127B824DD1E8500320A06 /* Fonts.swift */; };
+		C4A127DF24DD1E8500320A06 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A127B924DD1E8500320A06 /* Colors.xcassets */; };
+		C4A127E024DD1E8500320A06 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A127BA24DD1E8500320A06 /* Image.xcassets */; };
+		C4A127F324DD1E8500320A06 /* TKFormGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A127D024DD1E8500320A06 /* TKFormGenerator.swift */; };
+		C4A127F424DD1E8500320A06 /* TKPasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A127D224DD1E8500320A06 /* TKPasswordField.swift */; };
+		C4A127F524DD1E8500320A06 /* TKTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A127D624DD1E8500320A06 /* TKTextField.swift */; };
+		C4A127F624DD1E8500320A06 /* LoginRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A127D924DD1E8500320A06 /* LoginRequestBody.swift */; };
+		C4A127F724DD1E9A00320A06 /* Brandon_med_it.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4A127BC24DD1E8500320A06 /* Brandon_med_it.otf */; };
+		C4A127F824DD1E9A00320A06 /* Brandon_bld.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4A127BD24DD1E8500320A06 /* Brandon_bld.otf */; };
+		C4A127F924DD1E9A00320A06 /* Brandon_med.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4A127BE24DD1E8500320A06 /* Brandon_med.otf */; };
+		C4A127FA24DD1E9A00320A06 /* Brandon_light_it.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4A127BF24DD1E8500320A06 /* Brandon_light_it.otf */; };
+		C4A127FB24DD1E9A00320A06 /* Brandon_reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4A127C024DD1E8500320A06 /* Brandon_reg.otf */; };
+		C4A127FC24DD1E9A00320A06 /* Brandon_light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4A127C124DD1E8500320A06 /* Brandon_light.otf */; };
+		C4A127FD24DD1E9A00320A06 /* Brandon_blk_it.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4A127C224DD1E8500320A06 /* Brandon_blk_it.otf */; };
+		C4A127FE24DD1E9A00320A06 /* Brandon_reg_it.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4A127C324DD1E8500320A06 /* Brandon_reg_it.otf */; };
+		C4A127FF24DD1E9A00320A06 /* NeutraText-BookItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4A127C424DD1E8500320A06 /* NeutraText-BookItalic.otf */; };
+		C4A1280024DD1E9A00320A06 /* Brandon_thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4A127C524DD1E8500320A06 /* Brandon_thin.otf */; };
+		C4A1280124DD1E9A00320A06 /* Brandon_bld_it.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4A127C624DD1E8500320A06 /* Brandon_bld_it.otf */; };
+		C4A1280224DD1E9A00320A06 /* NeutraText-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4A127C724DD1E8500320A06 /* NeutraText-BoldItalic.otf */; };
+		C4A1280324DD1E9A00320A06 /* NeutraText-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4A127C824DD1E8500320A06 /* NeutraText-Book.otf */; };
+		C4A1280424DD1E9A00320A06 /* Brandon_thin_it.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4A127C924DD1E8500320A06 /* Brandon_thin_it.otf */; };
+		C4A1280524DD1E9A00320A06 /* Brandon_blk.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4A127CA24DD1E8500320A06 /* Brandon_blk.otf */; };
+		C4A1280624DD1E9A00320A06 /* NeutraText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4A127CB24DD1E8500320A06 /* NeutraText-Bold.otf */; };
+		C4A1280A24DD1FB400320A06 /* ContentHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A1280924DD1FB400320A06 /* ContentHostingController.swift */; };
+		C4A1280C24DD210600320A06 /* RR+UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A1280B24DD210600320A06 /* RR+UIApplication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +59,41 @@
 		C4A1278F24DD1E5300320A06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4A1279124DD1E5300320A06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C4A1279324DD1E5300320A06 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		C4A1279524DD1E5400320A06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4A1279824DD1E5400320A06 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C4A1279B24DD1E5400320A06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4A1279D24DD1E5400320A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4A127A224DD1E5400320A06 /* viper-swift-ui-portfolioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "viper-swift-ui-portfolioTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A127A624DD1E5400320A06 /* viper_swift_ui_portfolioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viper_swift_ui_portfolioTests.swift; sourceTree = "<group>"; };
 		C4A127A824DD1E5400320A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4A127B224DD1E8500320A06 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C4A127B324DD1E8500320A06 /* LoginInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		C4A127B424DD1E8500320A06 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		C4A127B724DD1E8500320A06 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		C4A127B824DD1E8500320A06 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		C4A127B924DD1E8500320A06 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		C4A127BA24DD1E8500320A06 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
+		C4A127BC24DD1E8500320A06 /* Brandon_med_it.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_med_it.otf; sourceTree = "<group>"; };
+		C4A127BD24DD1E8500320A06 /* Brandon_bld.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_bld.otf; sourceTree = "<group>"; };
+		C4A127BE24DD1E8500320A06 /* Brandon_med.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_med.otf; sourceTree = "<group>"; };
+		C4A127BF24DD1E8500320A06 /* Brandon_light_it.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_light_it.otf; sourceTree = "<group>"; };
+		C4A127C024DD1E8500320A06 /* Brandon_reg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_reg.otf; sourceTree = "<group>"; };
+		C4A127C124DD1E8500320A06 /* Brandon_light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_light.otf; sourceTree = "<group>"; };
+		C4A127C224DD1E8500320A06 /* Brandon_blk_it.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_blk_it.otf; sourceTree = "<group>"; };
+		C4A127C324DD1E8500320A06 /* Brandon_reg_it.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_reg_it.otf; sourceTree = "<group>"; };
+		C4A127C424DD1E8500320A06 /* NeutraText-BookItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeutraText-BookItalic.otf"; sourceTree = "<group>"; };
+		C4A127C524DD1E8500320A06 /* Brandon_thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_thin.otf; sourceTree = "<group>"; };
+		C4A127C624DD1E8500320A06 /* Brandon_bld_it.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_bld_it.otf; sourceTree = "<group>"; };
+		C4A127C724DD1E8500320A06 /* NeutraText-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeutraText-BoldItalic.otf"; sourceTree = "<group>"; };
+		C4A127C824DD1E8500320A06 /* NeutraText-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeutraText-Book.otf"; sourceTree = "<group>"; };
+		C4A127C924DD1E8500320A06 /* Brandon_thin_it.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_thin_it.otf; sourceTree = "<group>"; };
+		C4A127CA24DD1E8500320A06 /* Brandon_blk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_blk.otf; sourceTree = "<group>"; };
+		C4A127CB24DD1E8500320A06 /* NeutraText-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeutraText-Bold.otf"; sourceTree = "<group>"; };
+		C4A127D024DD1E8500320A06 /* TKFormGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKFormGenerator.swift; sourceTree = "<group>"; };
+		C4A127D224DD1E8500320A06 /* TKPasswordField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKPasswordField.swift; sourceTree = "<group>"; };
+		C4A127D624DD1E8500320A06 /* TKTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKTextField.swift; sourceTree = "<group>"; };
+		C4A127D924DD1E8500320A06 /* LoginRequestBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequestBody.swift; sourceTree = "<group>"; };
+		C4A1280924DD1FB400320A06 /* ContentHostingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentHostingController.swift; sourceTree = "<group>"; };
+		C4A1280B24DD210600320A06 /* RR+UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RR+UIApplication.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +135,15 @@
 		C4A1278E24DD1E5300320A06 /* viper-swift-ui-portfolio */ = {
 			isa = PBXGroup;
 			children = (
+				C4A127D824DD1E8500320A06 /* Entities */,
+				C4A127CC24DD1E8500320A06 /* Extensions */,
+				C4A127B124DD1E8500320A06 /* Login */,
+				C4A127B524DD1E8500320A06 /* Resources */,
+				C4A127CF24DD1E8500320A06 /* ThemeKit */,
 				C4A1278F24DD1E5300320A06 /* AppDelegate.swift */,
+				C4A1280924DD1FB400320A06 /* ContentHostingController.swift */,
 				C4A1279124DD1E5300320A06 /* SceneDelegate.swift */,
 				C4A1279324DD1E5300320A06 /* ContentView.swift */,
-				C4A1279524DD1E5400320A06 /* Assets.xcassets */,
 				C4A1279A24DD1E5400320A06 /* LaunchScreen.storyboard */,
 				C4A1279D24DD1E5400320A06 /* Info.plist */,
 				C4A1279724DD1E5400320A06 /* Preview Content */,
@@ -107,6 +168,125 @@
 			path = "viper-swift-ui-portfolioTests";
 			sourceTree = "<group>";
 		};
+		C4A127B124DD1E8500320A06 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C4A127B224DD1E8500320A06 /* LoginView.swift */,
+				C4A127B324DD1E8500320A06 /* LoginInteractor.swift */,
+				C4A127B424DD1E8500320A06 /* LoginPresenter.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		C4A127B524DD1E8500320A06 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C4A127B624DD1E8500320A06 /* Generated */,
+				C4A127B924DD1E8500320A06 /* Colors.xcassets */,
+				C4A127BA24DD1E8500320A06 /* Image.xcassets */,
+				C4A127BB24DD1E8500320A06 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C4A127B624DD1E8500320A06 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				C4A127B724DD1E8500320A06 /* Assets.swift */,
+				C4A127B824DD1E8500320A06 /* Fonts.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		C4A127BB24DD1E8500320A06 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C4A127BC24DD1E8500320A06 /* Brandon_med_it.otf */,
+				C4A127BD24DD1E8500320A06 /* Brandon_bld.otf */,
+				C4A127BE24DD1E8500320A06 /* Brandon_med.otf */,
+				C4A127BF24DD1E8500320A06 /* Brandon_light_it.otf */,
+				C4A127C024DD1E8500320A06 /* Brandon_reg.otf */,
+				C4A127C124DD1E8500320A06 /* Brandon_light.otf */,
+				C4A127C224DD1E8500320A06 /* Brandon_blk_it.otf */,
+				C4A127C324DD1E8500320A06 /* Brandon_reg_it.otf */,
+				C4A127C424DD1E8500320A06 /* NeutraText-BookItalic.otf */,
+				C4A127C524DD1E8500320A06 /* Brandon_thin.otf */,
+				C4A127C624DD1E8500320A06 /* Brandon_bld_it.otf */,
+				C4A127C724DD1E8500320A06 /* NeutraText-BoldItalic.otf */,
+				C4A127C824DD1E8500320A06 /* NeutraText-Book.otf */,
+				C4A127C924DD1E8500320A06 /* Brandon_thin_it.otf */,
+				C4A127CA24DD1E8500320A06 /* Brandon_blk.otf */,
+				C4A127CB24DD1E8500320A06 /* NeutraText-Bold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C4A127CC24DD1E8500320A06 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C4A1280B24DD210600320A06 /* RR+UIApplication.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C4A127CF24DD1E8500320A06 /* ThemeKit */ = {
+			isa = PBXGroup;
+			children = (
+				C4A127D024DD1E8500320A06 /* TKFormGenerator.swift */,
+				C4A127D124DD1E8500320A06 /* NavigationController */,
+				C4A127D224DD1E8500320A06 /* TKPasswordField.swift */,
+				C4A127D324DD1E8500320A06 /* Validator */,
+				C4A127D424DD1E8500320A06 /* TextField */,
+				C4A127D624DD1E8500320A06 /* TKTextField.swift */,
+				C4A127D724DD1E8500320A06 /* Browser */,
+			);
+			path = ThemeKit;
+			sourceTree = "<group>";
+		};
+		C4A127D124DD1E8500320A06 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		C4A127D324DD1E8500320A06 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Validator;
+			sourceTree = "<group>";
+		};
+		C4A127D424DD1E8500320A06 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				C4A127D524DD1E8500320A06 /* Model */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		C4A127D524DD1E8500320A06 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C4A127D724DD1E8500320A06 /* Browser */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Browser;
+			sourceTree = "<group>";
+		};
+		C4A127D824DD1E8500320A06 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				C4A127D924DD1E8500320A06 /* LoginRequestBody.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -117,6 +297,7 @@
 				C4A1278824DD1E5300320A06 /* Sources */,
 				C4A1278924DD1E5300320A06 /* Frameworks */,
 				C4A1278A24DD1E5300320A06 /* Resources */,
+				C4A1280D24DD213F00320A06 /* Swift Gen */,
 			);
 			buildRules = (
 			);
@@ -188,9 +369,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4A1280024DD1E9A00320A06 /* Brandon_thin.otf in Resources */,
+				C4A127FE24DD1E9A00320A06 /* Brandon_reg_it.otf in Resources */,
+				C4A127FA24DD1E9A00320A06 /* Brandon_light_it.otf in Resources */,
 				C4A1279C24DD1E5400320A06 /* LaunchScreen.storyboard in Resources */,
+				C4A127DF24DD1E8500320A06 /* Colors.xcassets in Resources */,
+				C4A127FC24DD1E9A00320A06 /* Brandon_light.otf in Resources */,
+				C4A127F824DD1E9A00320A06 /* Brandon_bld.otf in Resources */,
+				C4A127FF24DD1E9A00320A06 /* NeutraText-BookItalic.otf in Resources */,
+				C4A127E024DD1E8500320A06 /* Image.xcassets in Resources */,
+				C4A127FB24DD1E9A00320A06 /* Brandon_reg.otf in Resources */,
+				C4A1280524DD1E9A00320A06 /* Brandon_blk.otf in Resources */,
+				C4A1280124DD1E9A00320A06 /* Brandon_bld_it.otf in Resources */,
 				C4A1279924DD1E5400320A06 /* Preview Assets.xcassets in Resources */,
-				C4A1279624DD1E5400320A06 /* Assets.xcassets in Resources */,
+				C4A1280224DD1E9A00320A06 /* NeutraText-BoldItalic.otf in Resources */,
+				C4A127F724DD1E9A00320A06 /* Brandon_med_it.otf in Resources */,
+				C4A127FD24DD1E9A00320A06 /* Brandon_blk_it.otf in Resources */,
+				C4A1280424DD1E9A00320A06 /* Brandon_thin_it.otf in Resources */,
+				C4A1280324DD1E9A00320A06 /* NeutraText-Book.otf in Resources */,
+				C4A1280624DD1E9A00320A06 /* NeutraText-Bold.otf in Resources */,
+				C4A127F924DD1E9A00320A06 /* Brandon_med.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,13 +401,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C4A1280D24DD213F00320A06 /* Swift Gen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Gen";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nswiftgen\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C4A1278824DD1E5300320A06 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4A1280C24DD210600320A06 /* RR+UIApplication.swift in Sources */,
+				C4A127DE24DD1E8500320A06 /* Fonts.swift in Sources */,
+				C4A127F524DD1E8500320A06 /* TKTextField.swift in Sources */,
+				C4A127DC24DD1E8500320A06 /* LoginPresenter.swift in Sources */,
+				C4A127DD24DD1E8500320A06 /* Assets.swift in Sources */,
 				C4A1279024DD1E5300320A06 /* AppDelegate.swift in Sources */,
 				C4A1279224DD1E5300320A06 /* SceneDelegate.swift in Sources */,
+				C4A127DA24DD1E8500320A06 /* LoginView.swift in Sources */,
+				C4A127F424DD1E8500320A06 /* TKPasswordField.swift in Sources */,
+				C4A127F324DD1E8500320A06 /* TKFormGenerator.swift in Sources */,
+				C4A1280A24DD1FB400320A06 /* ContentHostingController.swift in Sources */,
+				C4A127F624DD1E8500320A06 /* LoginRequestBody.swift in Sources */,
+				C4A127DB24DD1E8500320A06 /* LoginInteractor.swift in Sources */,
 				C4A1279424DD1E5300320A06 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

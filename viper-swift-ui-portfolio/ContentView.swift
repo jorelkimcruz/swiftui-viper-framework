@@ -10,12 +10,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        let interactor = LoginInteractor()
+        let presenter = LoginPresenter(interactor: interactor)
+        return LoginView(presenter: presenter)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        let interactor = LoginInteractor()
+        let presenter = LoginPresenter(interactor: interactor)
+        return LoginView(presenter: presenter)
     }
 }

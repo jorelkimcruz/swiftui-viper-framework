@@ -1,0 +1,15 @@
+output_dir: viper-swift-ui-portfolio/Resources/Generated/
+xcassets:
+  - inputs:
+      - viper-swift-ui-portfolio/Resources/Image.xcassets
+      - viper-swift-ui-portfolio/Resources/Colors.xcassets
+    outputs:
+       - templateName: swift4
+         output: Assets.swift
+fonts:
+  - inputs:
+    - viper-swift-ui-portfolio/Resources/Fonts
+    outputs:
+    - templateName: swift4
+      output: Fonts.swift
+
