@@ -1,0 +1,6 @@
+framework module Pods_viper_swift_ui_portfolioTests {
+  umbrella header "Pods-viper-swift-ui-portfolioTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

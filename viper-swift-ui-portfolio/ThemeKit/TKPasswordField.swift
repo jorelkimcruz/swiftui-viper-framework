@@ -13,16 +13,16 @@ struct TKPasswordField: UIViewRepresentable {
     
     var commit: ()->() = { }
     var textStyle: UIFont
+    var placeholder: String
     
     func makeUIView(context: Context) -> UITextField {
         let textField = UITextField(frame: .zero)
         textField.isSecureTextEntry = true
         textField.delegate = context.coordinator
+        textField.placeholder = placeholder
         textField.font = textStyle
-        textField.text = text
         textField.textContentType = .password
         textField.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
-        
         _ = NotificationCenter.default.publisher(for: UITextField.textDidChangeNotification, object: textField)
             .compactMap {
                 
@@ -53,6 +53,7 @@ struct TKPasswordField: UIViewRepresentable {
         
         init(_ textField: TKPasswordField) {
             self.parent = textField
+            self.parent.text = textField.$text.wrappedValue
         }
         
         func textFieldShouldReturn(_ textField: UITextField) -> Bool {

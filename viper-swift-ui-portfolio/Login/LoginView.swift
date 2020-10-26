@@ -10,9 +10,8 @@ import SwiftUI
 
 struct LoginView: View {
     @ObservedObject var presenter: LoginPresenter
-    
-    var body: some View {
-        GeometryReader { geometry in
+    var cbody: some View {
+        return GeometryReader { geometry in
             VStack(spacing: 0) {
                 ZStack(alignment: .center) {
                     Image(Asset.Image.group6665.name).resizable()
@@ -27,9 +26,11 @@ struct LoginView: View {
                         Spacer()
                             .frame(height: geometry.size.height * 0.02)
                         VStack(spacing: geometry.size.height * 0.02) {
-                            TKTextField(label: "EMAIL", text: self.$presenter.email)
-                            TKTextField(label: "Password", text: self.$presenter.password, secured: true)
-                        }
+                            TKFormGenerator(fields: [
+                                TKField(value: self.presenter.email,label: "email"),
+                                TKField(value: self.presenter.password, type: .password, label: "password")
+                            ])
+                        }.padding(.leading, 32).padding(.trailing, 32)
                         Spacer()
                             .frame(height: geometry.size.height * 0.04)
                         HStack() {
@@ -47,8 +48,8 @@ struct LoginView: View {
                                     Text("LOGIN").foregroundColor(.white)
                                 }
                             }.frame(width: 132, height: 45)
-                                .cornerRadius(5)
-                                .shadow(color: Color(Asset.Colors.gray8D8F94.name), radius: 8, x: 0, y: 0)
+                            .cornerRadius(5)
+                            .shadow(color: Color(Asset.Colors.gray8D8F94.name), radius: 8, x: 0, y: 0)
                         }.padding(EdgeInsets(top: 0, leading: 32, bottom: 0, trailing: 32))
                         VStack(alignment: .center) {
                             Spacer()
@@ -108,10 +109,19 @@ struct LoginView: View {
                 }
             }.edgesIgnoringSafeArea(.all).onAppear { UIApplication.setStatusBarStyle(.lightContent) }
         }
+    }
+    var body: some View {
+        if #available(iOS 14.0, *) {
+            cbody.ignoresSafeArea(.keyboard, edges: .bottom)
+        } else {
+            cbody
+            // Fallback on earlier versions
+        }
         
     }
 }
 
+#if DEBUG
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         let interactor = LoginInteractor()
@@ -119,3 +129,4 @@ struct LoginView_Previews: PreviewProvider {
         return LoginView(presenter: presenter)
     }
 }
+#endif

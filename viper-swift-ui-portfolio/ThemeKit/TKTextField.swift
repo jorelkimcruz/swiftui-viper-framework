@@ -8,30 +8,31 @@
 
 import SwiftUI
 enum FieldState {
-    case error
+    case error(error: String)
     case normal
 }
 struct TKTextField: View {
     var label: String
+    var placeholder: String?
     
-    @Binding var text: String
+    @State var text: String
     
     var editingChanged: (Bool)->() = { _ in }
     var commit: ()->() = { }
     var secured: Bool = false
     
     @State private var hasFocus: Bool = false
-    @State private var _hidePassword: Bool = true
-    @State private var state: FieldState = .normal
+    @State var state: FieldState = .normal
+    @State var hidePassword: Bool = true
     
     var body: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: 6) {
             HStack {
                 Group {
                     Text(self.label.uppercased())
-                        .foregroundColor(Color(Asset.Colors.gray8D8F94.name))
+                        .foregroundColor(Color(Asset.Colors.gray53565C.name))
                         + Text(label.isEmpty ? "" : "*")
-                            .foregroundColor(Color(Asset.Colors.darkGreen.name))
+                            .foregroundColor(Color(Asset.Colors.red.name))
                 } .aspectRatio(contentMode: .fit)
                     .font(
                         .custom(FontFamily.BrandonGrotesque.medium.name,
@@ -41,34 +42,43 @@ struct TKTextField: View {
             ZStack(alignment: .leading) {
                 if secured {
                     HStack(spacing: 0) {
-                        if _hidePassword {
-                            TKPasswordField(text: $text, editingChanged: { (changed) in
-                                self.hasFocus = changed
-                            }, commit: {
-                                self.hasFocus = false
-                            },textStyle: FontFamily.BrandonGrotesque.regular
-                                .font(size: 14))
-                                .defaultFieldModifier()
+                        if hidePassword {
+                            HStack {
+                                Spacer()
+                                TKPasswordField(text: $text, editingChanged: { (changed) in
+                                    self.hasFocus = changed
+                                }, commit: {
+                                    self.hasFocus = false
+                                },textStyle: FontFamily.BrandonGrotesque.regular
+                                    .font(size: 14), placeholder: self.placeholder ?? "")
+                                    .defaultFieldModifier()
+                            }
+                            
                             
                         } else {
-                            TextField("", text: $text, onEditingChanged: { (changed) in
-                                self.hasFocus = changed
-                            }, onCommit: {
-                                self.hasFocus = false
-                            }).defaultFieldModifier()
+                            HStack {
+                                Spacer()
+                                TextField(self.placeholder ?? "", text: $text, onEditingChanged: { (changed) in
+                                    self.hasFocus = changed
+                                }, onCommit: {
+                                    self.hasFocus = false
+                                }).frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+                                Spacer()
+                            }
+                            .defaultFieldModifier()
                         }
                         
                         ZStack {
                             Color.white.aspectRatio(contentMode: .fit)
                             Button(action: {
                                 self.hasFocus = false
-                                self._hidePassword.toggle()
+                                self.hidePassword.toggle()
                             }) {
                                 ZStack{
                                     Image(systemName:
-                                        _hidePassword ?
-                                            "eye" :
-                                        "eye.slash" )
+                                        hidePassword ?
+                                            "eye.slash" :
+                                        "eye" )
                                         .renderingMode(.template)
                                         .foregroundColor(Color(Asset.Colors.gray53565C.name))
                                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 8))
@@ -78,17 +88,24 @@ struct TKTextField: View {
                         
                     }.defaultBorderModifier(hasFocus: hasFocus, state: state)
                 } else {
-                    TextField("", text: $text, onEditingChanged: { (changed) in
-                        self.hasFocus = changed
-                    }, onCommit: {
-                        self.hasFocus = false
-                    }).defaultFieldModifier().defaultBorderModifier(hasFocus: hasFocus, state: state)
+                    HStack {
+                        Spacer()
+                        TextField(self.placeholder ?? "", text: $text, onEditingChanged: { (changed) in
+                            self.hasFocus = changed
+                        }, onCommit: {
+                            self.hasFocus = false
+                        }).frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+                        Spacer()
+                    }
+                    .defaultFieldModifier()
+                    .defaultBorderModifier(hasFocus: hasFocus, state: state)
+                    
                     
                 }
+                Spacer()
             }
             
-        }.frame(maxWidth: UIScreen.main.bounds.width * 0.85)
-            .padding(EdgeInsets(top: 0, leading: 32, bottom: 0, trailing: 32))
+        }
     }
     
 }
@@ -107,7 +124,6 @@ fileprivate struct fontModifier: ViewModifier {
     
     func body(content: Content) -> some View {
         return content.font(.custom(FontFamily.BrandonGrotesque.regular.name, size: 14))
-            .padding(.all, 11).background(Color.white)
             .foregroundColor(Color(Asset.Colors.lightBlack1A1A1A.name))
         
     }
@@ -123,32 +139,39 @@ fileprivate struct borderModifier: ViewModifier {
     }
     
     func body(content: Content) -> some View {
+        var borderColor: Color;
+        switch self.state {
+        case .error(_):
+            borderColor = Color(Asset.Colors.red.name);
+        default:
+            borderColor =  self.hasFocus ? Color(Asset.Colors.instructionBlack.name) :  Color(Asset.Colors.lightGray.name)
+            
+        }
         return content.overlay(
             Rectangle()
                 .stroke(
-                    Color(
-                        state == .error ? Asset.Colors.red.name :
-                            hasFocus ? Asset.Colors.instructionBlack.name : Asset.Colors.lightGray.name ),
+                    borderColor,
                     lineWidth: 1))
+            .background(Color.white)
             .frame(height: UIScreen.main.bounds.height * 0.046)
     }
 }
 
-
-
+#if DEBUG
 fileprivate struct TKTextFieldPreview: View {
-    @State private var name: String = "emmanuelle.concepcion@gmail.com"
-    @State private var nam2: String = ""
+    @State private var email: String = "emmanuelle.concepcion@gmail.com"
+    @State private var password: String = "123123123123123123123123123121231231231233123123123123123"
+    @State private var empty: String = ""
     
     var body: some View {
         VStack {
-            TKTextField(label: "EMAIL", text: $name)
-            TKTextField(label: "EMAIL", text: $nam2)
-            TKTextField(label: "PASSWORD", text: $name, secured: true)
-        }.background(Image(Asset.Image.bg.name))
+            TKTextField(label: "EMAIL", text: email)
+            TKTextField(label: "EMAIL", text: empty)
+            TKTextField(label: "PASSWORD", text: password, secured: true)
+            TKTextField(label: "PASSWORD", text: password, secured: true, hidePassword: false)
+        }.background(Image(Asset.Image.bg.name)).padding(.leading, 32).padding(.trailing, 32)
     }
 }
-
 struct TKTextField_Previews: PreviewProvider {
     
     static var previews: some View {
@@ -157,3 +180,4 @@ struct TKTextField_Previews: PreviewProvider {
         }
     }
 }
+#endif

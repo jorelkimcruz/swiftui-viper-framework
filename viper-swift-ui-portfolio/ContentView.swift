@@ -16,10 +16,12 @@ struct ContentView: View {
     }
 }
 
+#if DEBUG
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        let interactor = LoginInteractor()
+        let interactor = LoginInteractor(LoginBodyRequest(email: "sampleinput@gmail.com"))
         let presenter = LoginPresenter(interactor: interactor)
         return LoginView(presenter: presenter)
     }
 }
+#endif

@@ -18,6 +18,11 @@ final class LoginBodyRequest {
     @Published var email: String = ""
     @Published var password: String = ""
     
+    init(email: String = "", password: String = "") {
+        self.email = email
+        self.password = password
+    }
+    
     func dictionaryRepresentation() -> [String: Any] {
         var dictionary: [String: Any] = [:]
         dictionary[CodingKeys.email.stringValue] = email

@@ -41,4 +41,9 @@ class LoginPresenter: ObservableObject {
                     .assign(to: \.password, on: self)
                     .store(in: &cancellables)
     }
+    
+    func validate (){
+        
+    }
+    
 }

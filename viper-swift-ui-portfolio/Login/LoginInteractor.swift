@@ -10,7 +10,7 @@ import Combine
 
 class LoginInteractor {
     
-    private let loginRequestBody: LoginBodyRequest = LoginBodyRequest()
+    private let loginRequestBody: LoginBodyRequest
     private var cancellables = Set<AnyCancellable>()
     
     var email: String { loginRequestBody.email }
@@ -19,7 +19,8 @@ class LoginInteractor {
     var password: String { loginRequestBody.password }
     var passwordPublisher: Published<String>.Publisher { loginRequestBody.$password }
     
-    init () {
+    init (_ login: LoginBodyRequest? = nil) {
+        self.loginRequestBody = login ?? LoginBodyRequest()
     }
     
     func setEmail(_ email: String) {
