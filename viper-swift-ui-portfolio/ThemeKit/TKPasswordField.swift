@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct TKPasswordField: UIViewRepresentable {
-    @Binding var text: String
+    @Binding var text: String {
+        didSet {
+            
+        }
+    }
     var editingChanged: (Bool)->() = { _ in }
     
     var commit: ()->() = { }
@@ -53,7 +57,6 @@ struct TKPasswordField: UIViewRepresentable {
         
         init(_ textField: TKPasswordField) {
             self.parent = textField
-            self.parent.text = textField.$text.wrappedValue
         }
         
         func textFieldShouldReturn(_ textField: UITextField) -> Bool {

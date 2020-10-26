@@ -42,7 +42,7 @@
 		C4A1280524DD1E9A00320A06 /* Brandon_blk.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4A127CA24DD1E8500320A06 /* Brandon_blk.otf */; };
 		C4A1280624DD1E9A00320A06 /* NeutraText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4A127CB24DD1E8500320A06 /* NeutraText-Bold.otf */; };
 		C4A1280A24DD1FB400320A06 /* ContentHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A1280924DD1FB400320A06 /* ContentHostingController.swift */; };
-		C4A1280C24DD210600320A06 /* RR+UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A1280B24DD210600320A06 /* RR+UIApplication.swift */; };
+		C4A1280C24DD210600320A06 /* Viper+UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A1280B24DD210600320A06 /* Viper+UIApplication.swift */; };
 		C4AFC93024E14E72007DAA59 /* TKFormGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AFC92F24E14E72007DAA59 /* TKFormGenerator.swift */; };
 		C4AFC93224E14EEC007DAA59 /* TKField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AFC93124E14EEC007DAA59 /* TKField.swift */; };
 /* End PBXBuildFile section */
@@ -100,7 +100,7 @@
 		C4A127D624DD1E8500320A06 /* TKTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKTextField.swift; sourceTree = "<group>"; };
 		C4A127D924DD1E8500320A06 /* LoginRequestBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequestBody.swift; sourceTree = "<group>"; };
 		C4A1280924DD1FB400320A06 /* ContentHostingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentHostingController.swift; sourceTree = "<group>"; };
-		C4A1280B24DD210600320A06 /* RR+UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RR+UIApplication.swift"; sourceTree = "<group>"; };
+		C4A1280B24DD210600320A06 /* Viper+UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Viper+UIApplication.swift"; sourceTree = "<group>"; };
 		C4AFC92F24E14E72007DAA59 /* TKFormGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKFormGenerator.swift; sourceTree = "<group>"; };
 		C4AFC93124E14EEC007DAA59 /* TKField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKField.swift; sourceTree = "<group>"; };
 		EE5BEC6673203E4C4AEC5C4F /* Pods-viper-swift-ui-portfolioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viper-swift-ui-portfolioTests.debug.xcconfig"; path = "Target Support Files/Pods-viper-swift-ui-portfolioTests/Pods-viper-swift-ui-portfolioTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -266,7 +266,7 @@
 		C4A127CC24DD1E8500320A06 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C4A1280B24DD210600320A06 /* RR+UIApplication.swift */,
+				C4A1280B24DD210600320A06 /* Viper+UIApplication.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -503,7 +503,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4AFC93224E14EEC007DAA59 /* TKField.swift in Sources */,
-				C4A1280C24DD210600320A06 /* RR+UIApplication.swift in Sources */,
+				C4A1280C24DD210600320A06 /* Viper+UIApplication.swift in Sources */,
 				C4A127DE24DD1E8500320A06 /* Fonts.swift in Sources */,
 				C4A127F524DD1E8500320A06 /* TKTextField.swift in Sources */,
 				C4A127DC24DD1E8500320A06 /* LoginPresenter.swift in Sources */,
